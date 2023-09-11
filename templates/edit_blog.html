@@ -1,0 +1,38 @@
+{% include 'header.html' %}
+<main class="container mt-5 p-4 card">
+  <form class="row g-3" method='POST' action="/edit_blog/{{ blog['blog_id'] }}" enctype="multipart/form-data">
+    <h3>Edit Blog</h3>
+    <div class="col-md-2">
+      <label for="title" class="form-label">title</label>
+      <input type="text" class="form-control" id="title" name="title" value="{{ blog['title'] }}">
+    </div>
+    <div class="form-floating">
+      <textarea type="text" class="form-control" id="description" name="description">{{ blog['description'] }}</textarea>
+      <label for="description" class="form-label">Description</label>
+
+    </div>
+
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Save a Copy
+        </label>
+      </div>
+    </div>
+    <!-- <div class="mb-3">
+      <label for="image" class="form-label">Choose File</label>
+      <input type="file" name="image" id="image" class="form-control">
+
+    </div> -->
+    <div class mb-3>
+      <button type="submit" class="btn btn-warning">Edit Blog</button>
+      <button type="reset" class="btn btn-danger">Reset</button>
+    </div>
+    
+
+
+    </form>
+</main>
+
+{% include 'footer.html' %}

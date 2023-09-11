@@ -1,0 +1,19 @@
+{% include 'header.html' %}
+
+    <div class="profile-container mt-3 display: flex; justify-content: space-between ;">
+        <img class="profile-picture" src="/static/images/logo.jpg" style = "width: 20%;" alt="Logo" class="center">
+        <!-- <img class="profile-picture" src="/static/images/logo.jpg" style = "width: 15vw" alt="Your Name"> -->
+        <div class="display: flex; justify-content: space-between ; ">
+            <div class="container mt-1 card p-2 style=”padding: 10px; margin: 10px;">
+                <h2>{{ data['fname'] + "  " + data['lname'] }}</h2><hr>
+                {{ data['email'] }}<hr>
+                {{data['address']}}<hr>
+                {{data['city']}}<hr>
+                {{data['state']}}<hr>
+                {{data['zip']}}<hr>
+            </div
+        </div>
+    </div>
+
+
+{% include 'footer.html' %}

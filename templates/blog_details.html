@@ -1,0 +1,18 @@
+{% include 'header.html' %}
+
+<div class="container mt-3">
+    <div>
+        <h3>{{ blog['title'] }}</h3>
+    </div class="container">
+    <div>
+        <img src="/static/images/{{ blog['image'] }}" style="width: 15vw" alt="">
+    </div>
+    <div class="d-flex justify-content-between">
+        
+        <h4><p>{{ blog['fname'] + "  " + blog['lname'] }}</p></h4>
+        <p>{{ blog['created_at'] }}</p>
+        <p>{{ blog['blog_description'] }}</p>
+        
+    </div>
+</div>
+{% include 'footer.html' %}

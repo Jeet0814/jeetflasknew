@@ -1,0 +1,27 @@
+{% include 'header.html' %}
+
+<div class="container my-3">
+    {% for blog in blogs %}
+    <div>
+
+
+        <div>
+            <h3>{{ blog['title'] }}</h3>
+            <p>{{ blog['description'] }}</p>
+        </div>
+        <div style = "display: flex; justify-content:space-between ; align-items: center;">
+            <p>{{ blog['created_at'] }}</p>
+            <p><b>{{ blog['fname'] + "  " + blog['lname'] }}</b></p>
+        </div>
+        <div>
+            <a href="/edit_blog/{{ blog['blog_id'] }}" class="btn btn-warning">Edit</a>
+            <a href="/delete_blog/{{ blog['blog_id'] }}" class="btn btn-danger">Delete</a>
+
+        </div>
+        <hr>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% include 'footer.html' %}
